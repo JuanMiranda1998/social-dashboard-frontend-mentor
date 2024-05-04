@@ -1,0 +1,1 @@
+// Hacer el format para los numberos que superen el num 10000 sean 10K
