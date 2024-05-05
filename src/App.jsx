@@ -123,6 +123,7 @@ function App() {
               accountName={el.accountName}
               followNum={el.followNum}
               changeToday={el.changeToday}
+              socialPlatform={el.socialPlatform}
               key={el.id}
             />
           ))}
