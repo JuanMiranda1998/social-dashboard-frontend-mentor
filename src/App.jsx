@@ -1,4 +1,5 @@
 import './App.css'
+import DailyValueCard from './components/DailyValueCard'
 import TotalCard from './components/TotalCard'
 
 function App() {
@@ -97,8 +98,8 @@ function App() {
   ]
 
   return (
-    <div className="w-[100lvw] min-h-[100lvh]">
-      <div className="my-8 mx-6 flex flex-col font-Inter">
+    <div className="w-[100vw] min-h-[100lvh] flex flex-col items-center justify-center">
+      <div className="w-[90%] my-6 flex flex-col font-Inter">
         <div className="flex flex-col text-left">
           <div className="pb-4 border-b border-black">
             <h1 className="text-xl font-semibold">Social Media Dashboard</h1>
@@ -114,6 +115,7 @@ function App() {
               </label>
           </div>
         </div>
+        
         <div className='grid grid-cols-1'>
           {TOTALDATA.map(el => (
             <TotalCard
@@ -125,32 +127,18 @@ function App() {
             />
           ))}
         </div>
+
         <div>
-          <h2 className='mb-2'>Overview Today</h2>
+          <h2 className='text-xl font-semibold text-[#616476] mb-2'>Overview Today</h2>
           <div className='grid grid-cols-1 gap-4'>
             {DAILYDATA.map(val => (
-            <div className='w-full flex flex-col items-center justify-center px-6 py-4 rounded-md bg-[#f0f3fa]' key={val.id}>
-              <div className='w-full flex flex-row items-center justify-between mb-8'>
-                <h2>{val.category}</h2>
-                <div>
-                  <img src={val.socialIcon} alt="" />
-                </div>
-              </div>
-              <div className='w-full flex flex-row items-baseline justify-between text-center'>
-                <p className='text-4xl font-semibold'>{val.value}</p>
-                <div className='flex flex-row gap-1 items-center'>
-                  <div className='w-[12px] h-[10px]'>
-                    {val.variation > 0 ? (
-                      <img className='w-full h-full' src="/icon-up.svg" alt="" />
-                    ) : (
-                      <img className='w-full h-full' src="/icon-down.svg" alt="" />
-                    ) }
-                  </div>
-                  <p>{val.variation}%</p>
-                </div>
-              </div>
-              
-            </div>
+              <DailyValueCard 
+                key={val.id}
+                category={val.category}
+                socialIcon={val.socialIcon}
+                value={val.value}
+                variation={val.variation}
+              />
             ))}
           </div>
         </div>
