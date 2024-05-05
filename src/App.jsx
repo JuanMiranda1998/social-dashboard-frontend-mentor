@@ -98,15 +98,15 @@ function App() {
   ]
 
   return (
-    <div className="w-[100vw] min-h-[100lvh] flex flex-col items-center justify-center">
-      <div className="w-[90%] my-6 flex flex-col font-Inter">
-        <div className="flex flex-col text-left">
-          <div className="pb-4 border-b border-black">
-            <h1 className="text-xl font-semibold">Social Media Dashboard</h1>
-            <p>Total Followers: 23,004</p>
+    <div className="w-full max-w-[100vw] min-h-[100lvh] overflow-hidden flex flex-col justify-center items-center">
+      <div className="w-[90%] max-w-[1000px] lg:max-w-full my-6 lg:mx-6 flex flex-col font-Inter">
+        <div className="flex flex-col lg:flex-row lg:justify-between text-left">
+          <div className="pb-4 border-b border-[#616476] lg:border-none">
+            <h1 className="text-2xl font-bold">Social Media Dashboard</h1>
+            <p className='text-sm font-bold text-[#616476]'>Total Followers: 23,004</p>
           </div>
-          <div className='flex flex-row justify-between my-4'>
-            <p>Dark Mode</p>
+          <div className='flex flex-row justify-between lg:items-center my-4'>
+            <p className='text-sm font-bold text-[#616476] lg:mr-4'>Dark Mode</p>
             <label className="toggle-switch">
                 <input type="checkbox"/>
                 <div className="toggle-switch-background">
@@ -116,7 +116,7 @@ function App() {
           </div>
         </div>
         
-        <div className='grid grid-cols-1'>
+        <div className='grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:grid-cols-4 lg:gap-8'>
           {TOTALDATA.map(el => (
             <TotalCard
               iconUrl={el.iconUrl}
@@ -130,8 +130,8 @@ function App() {
         </div>
 
         <div>
-          <h2 className='text-xl font-semibold text-[#616476] mb-2'>Overview Today</h2>
-          <div className='grid grid-cols-1 gap-4'>
+          <h2 className='text-xl font-bold text-[#616476] mb-2'>Overview - Today</h2>
+          <div className='grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-y-6 lg:gap-x-8'>
             {DAILYDATA.map(val => (
               <DailyValueCard 
                 key={val.id}
