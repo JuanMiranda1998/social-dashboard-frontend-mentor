@@ -1,8 +1,10 @@
 import './App.css'
 import DailyValueCard from './components/DailyValueCard'
 import TotalCard from './components/TotalCard'
+import { useThemeSwitch } from './components/hooks/useThemeSwitch'
 
 function App() {
+  const [mode, setMode] = useThemeSwitch()
 
   const TOTALDATA = [
     {
@@ -97,8 +99,9 @@ function App() {
     },
   ]
 
+
   return (
-    <div className="w-full max-w-[100vw] min-h-[100lvh] overflow-hidden flex flex-col justify-center items-center">
+    <div className="w-full max-w-[100vw] min-h-[100lvh] overflow-hidden flex flex-col justify-center items-center bg-white dark:bg-[#1d2029]">
       <div className="w-[90%] max-w-[1000px] lg:max-w-full my-6 lg:mx-6 flex flex-col font-Inter">
         <div className="flex flex-col lg:flex-row lg:justify-between text-left">
           <div className="pb-4 border-b border-[#616476] lg:border-none">
@@ -108,7 +111,7 @@ function App() {
           <div className='flex flex-row justify-between lg:items-center my-4'>
             <p className='text-sm font-bold text-[#616476] lg:mr-4'>Dark Mode</p>
             <label className="toggle-switch">
-                <input type="checkbox"/>
+                <input type="checkbox" onClick={() => { setMode(mode === 'dark' ? 'light' : 'dark') }}/>
                 <div className="toggle-switch-background">
                   <div className="toggle-switch-handle"></div>
                 </div>
