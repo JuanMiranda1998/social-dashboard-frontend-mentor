@@ -23,9 +23,16 @@ Users should be able to:
 - Toggle color theme to their preference
 
 
+### Screenshot
+
+![Desktop(1440px)](./capture/capture-desktop.png)
+![Mobile(375px)](./capture/capture-mobile.png)
+
+
 ### Links
 
 - Solution URL: [Github](https://github.com/JuanMiranda1998/social-dashboard-frontend-mentor)
+- Solution URL: [Netlify](https:/social-dashboard-juanmiranda.netlify.app/)
 
 
 ## My process
