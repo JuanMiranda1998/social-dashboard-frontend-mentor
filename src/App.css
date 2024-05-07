@@ -18,15 +18,12 @@
     height: 100%;
     background-color: #aeb3c9;
     border-radius: 20px;
-    box-shadow: inset 0 0 0 2px #aeb3c9;
-    transition: all 0.3s ease-in;
   }
   
   
-  /* .toggle-switch-background:hover{
-    background-color: #7beade;
-    box-shadow: inset 0 0 0 2px #7beade;
-  } */
+  .toggle-switch-background:hover{
+    background: linear-gradient(to right, #378fe6, #3eda82) ;;
+  }
   
   .toggle-switch-handle {
     position: absolute;

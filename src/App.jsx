@@ -102,7 +102,7 @@ function App() {
 
   return (
     <div className="w-full max-w-[100vw] min-h-[100lvh] overflow-hidden flex flex-col justify-center items-center bg-white dark:bg-[#1d2029]">
-      <div className="w-[90%] max-w-[1000px] lg:max-w-full my-6 lg:mx-6 flex flex-col font-Inter">
+      <div className="w-[90%] max-w-[1000px] lg:max-w-full my-6 lg:mt-8 lg:mx-6 flex flex-col font-Inter">
         <div className="flex flex-col lg:flex-row lg:justify-between text-left">
           <div className="pb-4 border-b border-[#616476] dark:border-[#8b97c6] lg:border-none">
             <h1 className="text-2xl font-bold text-[#1e202a] dark:text-white">Social Media Dashboard</h1>
