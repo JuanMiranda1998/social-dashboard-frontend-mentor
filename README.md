@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/JuanMiranda1998/social-dashboard-frontend-mentor)
-- Solution URL: [Netlify](https:/social-dashboard-juanmiranda.netlify.app)
+- Solution URL: [Netlify](https://social-dashboard-juanmiranda.netlify.app/)
 
 
 ## My process
