@@ -40,7 +40,7 @@ function App() {
       iconUrl: "/icon-youtube.svg",
     },
   ];
-  const DAILYDATA = [
+  const DAILYDATA = [  
     {
       id: 1,
       category: "Page Views",
@@ -98,6 +98,7 @@ function App() {
       variation: -12,
     },
   ];
+
   return (
     <div className="w-full max-w-[100vw] min-h-[100lvh] flex flex-col justify-center items-center bg-white dark:bg-[#1d2029]">
       <div className="w-[90%] max-w-[1000px] lg:max-w-full my-6 lg:mx-6 flex flex-col font-Inter">
@@ -118,8 +119,9 @@ function App() {
               <input
                 type="checkbox"
                 onClick={() => {
-                  setMode(mode === "dark" ? "light" : "dark");
+                  setMode(mode === "light" ? "dark" : "light");
                 }}
+                id="darkModeToggleBtn"
               />
               <div className="toggle-switch-background">
                 <div className="toggle-switch-handle"></div>
