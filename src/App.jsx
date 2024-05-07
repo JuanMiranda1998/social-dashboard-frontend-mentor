@@ -121,7 +121,6 @@ function App() {
                 onClick={() => {
                   setMode(mode === "light" ? "dark" : "light");
                 }}
-                id="darkModeToggleBtn"
               />
               <div className="toggle-switch-background">
                 <div className="toggle-switch-handle"></div>
