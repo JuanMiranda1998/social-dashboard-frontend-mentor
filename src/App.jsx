@@ -104,12 +104,12 @@ function App() {
     <div className="w-full max-w-[100vw] min-h-[100lvh] overflow-hidden flex flex-col justify-center items-center bg-white dark:bg-[#1d2029]">
       <div className="w-[90%] max-w-[1000px] lg:max-w-full my-6 lg:mx-6 flex flex-col font-Inter">
         <div className="flex flex-col lg:flex-row lg:justify-between text-left">
-          <div className="pb-4 border-b border-[#616476] lg:border-none">
-            <h1 className="text-2xl font-bold">Social Media Dashboard</h1>
-            <p className='text-sm font-bold text-[#616476]'>Total Followers: 23,004</p>
+          <div className="pb-4 border-b border-[#616476] dark:border-[#8b97c6] lg:border-none">
+            <h1 className="text-2xl font-bold text-[#1e202a] dark:text-white">Social Media Dashboard</h1>
+            <p className='text-sm font-bold text-[#616476] dark:text-[#8b97c6]'>Total Followers: 23,004</p>
           </div>
           <div className='flex flex-row justify-between lg:items-center my-4'>
-            <p className='text-sm font-bold text-[#616476] lg:mr-4'>Dark Mode</p>
+            <p className='text-sm font-bold text-[#616476] dark:text-[#8b97c6] lg:mr-4'>Dark Mode</p>
             <label className="toggle-switch">
                 <input type="checkbox" onClick={() => { setMode(mode === 'dark' ? 'light' : 'dark') }}/>
                 <div className="toggle-switch-background">
@@ -133,8 +133,8 @@ function App() {
         </div>
 
         <div>
-          <h2 className='text-xl font-bold text-[#616476] mb-2'>Overview - Today</h2>
-          <div className='grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-y-6 lg:gap-x-8'>
+          <h2 className='text-xl font-bold text-[#616476] dark:text-white mb-2'>Overview - Today</h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-y-6 lg:gap-x-8'>
             {DAILYDATA.map(val => (
               <DailyValueCard 
                 key={val.id}
